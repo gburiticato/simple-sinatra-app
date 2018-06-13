@@ -19,7 +19,7 @@ gem 'sinatra'
 EOF
 
 cat << EOF > /home/ec2-user/helloworld.rb
-!/usr/bin/env ruby
+#!/usr/bin/env ruby
 require 'sinatra'
 get '/' do
   "Hello World!"
