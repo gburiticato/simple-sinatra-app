@@ -8,17 +8,17 @@ sudo yum -y install ruby
 
 sudo gem install sinatra
 
-cat << EOF > config.ru
+cat << EOF > /home/ec2-user/config.ru
 require './helloworld'
 run Sinatra::Application
 EOF
 
-cat << EOF > Gemfile
+cat << EOF > /home/ec2-user/Gemfile
 source 'http://rubygems.org'
 gem 'sinatra'
 EOF
 
-cat << EOF > helloworld.rb
+cat << EOF > /home/ec2-user/helloworld.rb
 !/usr/bin/env ruby
 require 'sinatra'
 get '/' do
@@ -26,7 +26,7 @@ get '/' do
 end
 EOF
 
-sudo chmod +x helloworld.rb
+sudo chmod +x /home/ec2-user/helloworld.rb
 
-helloworld.rb &
+/home/ec2-user/helloworld.rb &
 
